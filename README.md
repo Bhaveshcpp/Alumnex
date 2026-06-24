@@ -9,4 +9,3 @@ Admin-only write access via JWT — data quality controlled at the gate, not aft
 Server-side pagination and filtering — scales to multi-batch, multi-department without re-architecture
 Optional alumni identity disclosure — respects privacy while enabling warm outreach
 Live: alumnex-zeta.vercel.app | 
-GitHub: github.com/aayushmathur15/Alumnex

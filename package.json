@@ -1,37 +1,46 @@
 {
-  "name": "alumnex",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "dev": "nodemon server.js",
-    "start": "node server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mathuraayush/Alumnex.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/mathuraayush/Alumnex/issues"
-  },
-  "homepage": "https://github.com/mathuraayush/Alumnex#readme",
-  "dependencies": {
-    "axios": "^1.18.1",
-    "bcryptjs": "^3.0.3",
-    "cors": "^2.8.6",
-    "csv-parser": "^3.2.0",
-    "dotenv": "^17.3.1",
-    "express": "^5.2.1",
-    "jsonwebtoken": "^9.0.3",
-    "mongodb": "^7.3.0",
-    "mongoose": "^9.2.1",
-    "multer": "^2.0.2"
-  },
-  "devDependencies": {
-    "nodemon": "^3.1.11"
-  }
+"name": "alumnex",
+"version": "1.0.0",
+"description": "Placement intelligence platform for managing and searching alumni interview experiences",
+"main": "index.js",
+"scripts": {
+"dev": "nodemon server.js",
+"start": "node server.js"
+},
+"repository": {
+"type": "git",
+"url": "git+https://github.com/Bhaveshcpp/Alumnex.git"
+},
+"keywords": [
+"mern",
+"placement",
+"alumni",
+"interview-experience",
+"mongodb",
+"express",
+"react",
+"nodejs"
+],
+"author": "Bhavesh Sharma",
+"license": "ISC",
+"type": "commonjs",
+"bugs": {
+"url": "https://github.com/Bhaveshcpp/Alumnex/issues"
+},
+"homepage": "https://github.com/Bhaveshcpp/Alumnex#readme",
+"dependencies": {
+"axios": "^1.18.1",
+"bcryptjs": "^3.0.3",
+"cors": "^2.8.6",
+"csv-parser": "^3.2.0",
+"dotenv": "^17.3.1",
+"express": "^5.2.1",
+"jsonwebtoken": "^9.0.3",
+"mongodb": "^7.3.0",
+"mongoose": "^9.2.1",
+"multer": "^2.0.2"
+},
+"devDependencies": {
+"nodemon": "^3.1.11"
+}
 }
