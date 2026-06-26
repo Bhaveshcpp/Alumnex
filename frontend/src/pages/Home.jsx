@@ -8,6 +8,7 @@ import FiltersPanel from '../components/FiltersPanel'
 import SearchBar from '../components/SearchBar'
 import Pagination from '../components/Pagination'
 import Skeleton from '../components/Skeleton'
+import TrendingCompanies from '../components/TrendingCompanies'
 
 export default function Home() {
   const dispatch = useDispatch()
@@ -63,9 +64,11 @@ export default function Home() {
           <h1 className="text-4xl font-bold mb-2">Interview Experiences</h1>
           <p className="text-blue-100">Learn from {} shared experiences</p>
         </div>
+            {/* Trending Companies */}
+<TrendingCompanies />
 
-        {/* Search Bar */}
-        <SearchBar onSearch={handleSearch} />
+{/* Search Bar */}
+<SearchBar onSearch={handleSearch} />
 
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
           {/* Filters Sidebar */}
