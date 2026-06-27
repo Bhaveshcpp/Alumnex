@@ -9,6 +9,7 @@ import SearchBar from '../components/SearchBar'
 import Pagination from '../components/Pagination'
 import Skeleton from '../components/Skeleton'
 import TrendingCompanies from '../components/TrendingCompanies'
+import DifficultyStats from '../components/DifficultyStats'
 
 export default function Home() {
   const dispatch = useDispatch()
@@ -64,8 +65,13 @@ export default function Home() {
           <h1 className="text-4xl font-bold mb-2">Interview Experiences</h1>
           <p className="text-blue-100">Learn from {} shared experiences</p>
         </div>
-            {/* Trending Companies */}
-<TrendingCompanies />
+        
+     
+
+<div className="grid md:grid-cols-2 gap-6">
+  <TrendingCompanies />
+  <DifficultyStats />
+</div>
 
 {/* Search Bar */}
 <SearchBar onSearch={handleSearch} />
