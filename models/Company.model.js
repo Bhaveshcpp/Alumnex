@@ -8,20 +8,25 @@ const companySchema = new mongoose.Schema(
       unique: true,
       trim: true,
     },
+
     slug: {
       type: String,
       required: true,
       unique: true,
-      index: true
+      index: true,
     },
+
     description: {
+      type: String,
+      default: "",
+    },
+
+    logo: {
       type: String,
       default: "",
     },
   },
   { timestamps: true }
 );
-
-
 
 module.exports = mongoose.model("Company", companySchema);

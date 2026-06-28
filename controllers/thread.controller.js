@@ -111,14 +111,13 @@ exports.getThreads = async (req, res) => {
       ];
     }
     const skip = (page - 1) * limit;
-
-    const threads = await Thread.find(filter)
-      .populate("company", "name slug")
-      .populate("jobRole", "title")
-      .sort({ createdAt: -1 })
-      .skip(skip)
-      .limit(Number(limit));
-
+    
+const threads = await Thread.find(filter)
+  .populate("company", "name slug logo")
+  .populate("jobRole", "title")
+  .sort({ createdAt: -1 })
+  .skip(skip)
+  .limit(Number(limit));
     const total = await Thread.countDocuments(filter);
 
     res.status(200).json({
@@ -138,8 +137,8 @@ exports.getThreadById = async (req, res) => {
     const { id } = req.params;
 
     const thread = await Thread.findById(id)
-      .populate("company", "name slug")
-      .populate("jobRole", "title");
+  .populate("company", "name slug logo")
+  .populate("jobRole", "title");   
 
     if (!thread) {
       return res.status(404).json({ message: "Thread not found" });

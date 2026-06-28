@@ -24,17 +24,36 @@ export default function ThreadCard({ thread }) {
       <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
         <div className="flex items-start justify-between mb-3">
           <div className="flex-1">
-            <div className="flex items-center gap-2 mb-1">
-              <h3 className="font-bold text-lg text-gray-900">
-                {thread.company?.name || 'Unknown Company'}
-              </h3>
-              <span className={`px-3 py-1 rounded-full text-xs font-semibold ${getDifficultyColor(thread.difficulty)}`}>
-                {thread.difficulty}
-              </span>
-            </div>
-            <p className="text-sm text-gray-600">
-              {thread.jobRole?.title || 'Role not specified'} • {thread.yearOfPlacement || 'Year not specified'}
-            </p>
+            <div className="flex items-center justify-between mb-3">
+  <div className="flex items-center gap-3">
+    {thread.company?.logo && (
+        <img
+            src={`/logos/${thread.company.logo}`}
+           alt={thread.company.name}
+           className="w-12 h-12 rounded-lg object-contain bg-white border p-1"
+      />
+    )}
+
+    <div>
+      <h3 className="font-bold text-lg text-gray-900">
+        {thread.company?.name || "Unknown Company"}
+      </h3>
+
+      <p className="text-sm text-gray-600">
+        {thread.jobRole?.title || "Role not specified"} •{" "}
+        {thread.yearOfPlacement || "Year not specified"}
+      </p>
+    </div>
+  </div>
+
+  <span
+    className={`px-3 py-1 rounded-full text-xs font-semibold ${getDifficultyColor(
+      thread.difficulty
+    )}`}
+  >
+    {thread.difficulty}
+  </span>
+</div>
           </div>
         </div>
 
