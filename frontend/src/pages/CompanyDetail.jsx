@@ -18,10 +18,21 @@ export default function CompanyDetail(){
       if (!mounted) return
       setCompany(res.data.company || res.data)
       // try to fetch threads for company
-      api.getThreads({ company: slug, perPage: 10 }).then(r => { if (mounted) setThreads(r.data.threads || r.data) })
+     api.getThreads({
+    company: slug,
+    page: 1,
+     limit: 10
+   }).then(r => {
+    if (mounted) {
+        setThreads(r.data.results || [])
+    }
+  })
     }).catch(() => {}).finally(() => mounted && setLoading(false))
     return () => { mounted = false }
   }, [slug])
+
+  console.log("Company:", company);
+  console.log("Threads:", threads);
 
   return (
     <MainLayout>
