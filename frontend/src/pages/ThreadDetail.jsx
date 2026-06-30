@@ -61,6 +61,11 @@ export default function ThreadDetail() {
     )
   }
 
+  const readingTime = Math.max(
+  1,
+  Math.ceil((current.experience || "").split(/\s+/).length / 200)
+  );
+
   return (
     <MainLayout>
       <div className="max-w-4xl mx-auto">
@@ -95,6 +100,8 @@ export default function ThreadDetail() {
             )}
             <span>•</span>
             <time>{formatDate(current.createdAt)}</time>
+            <span>•</span>
+          <div>🕒 {readingTime} min read</div>
           </div>
 
           {current.candidateName && (
