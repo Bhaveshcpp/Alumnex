@@ -63,7 +63,9 @@ export default function Home() {
         {/* Header */}
         <div className="bg-gradient-to-r from-blue-600 to-blue-800 text-white p-8 rounded-lg">
           <h1 className="text-4xl font-bold mb-2">Interview Experiences</h1>
-          <p className="text-blue-100">Learn from {} shared experiences</p>
+          <p className="text-blue-100">
+  Learn from {total} shared interview experiences
+</p>
         </div>
         
      
@@ -137,6 +139,7 @@ export default function Home() {
   className="fixed bottom-6 right-6 bg-blue-600 text-white px-4 py-2 rounded-full shadow-lg hover:bg-blue-700 transition"
   >↑ Top
   </button>
+  
     </MainLayout>
   )
 }
