@@ -109,13 +109,14 @@ export default function ThreadDetail() {
               <span className="font-medium">Experience shared by:</span> {current.candidateName}
               {current.linkedin && (
                 <a
-                  href={current.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="ml-2 text-blue-600 hover:underline"
+                 href={current.linkedin}
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 title="View candidate's LinkedIn profile"
+                 className="ml-2 text-blue-600 hover:underline"
                 >
-                  LinkedIn
-                </a>
+                 LinkedIn
+                  </a>
               )}
             </div>
           )}
