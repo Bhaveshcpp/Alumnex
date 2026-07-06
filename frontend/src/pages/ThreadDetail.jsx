@@ -77,7 +77,35 @@ export default function ThreadDetail() {
         </button>
 
         <article className="bg-white border border-gray-200 rounded-lg p-8">
-          <div className="flex items-center gap-3 mb-4">
+              <div className="flex items-center gap-4 mb-4">
+
+  {current.company?.logo && (
+    <img
+      src={`/logos/${current.company.logo}`}
+      alt={current.company.name}
+      className="w-16 h-16 object-contain bg-white border rounded-lg p-2"
+    />
+  )}
+
+  <div>
+    <h1 className="text-3xl font-bold text-gray-900">
+      {current.company?.name || "Unknown Company"}
+    </h1>
+
+    <p className="text-gray-500 mt-1">
+      {current.jobRole?.title}
+    </p>
+  </div>
+
+  <span
+    className={`ml-auto px-4 py-1 rounded-full text-sm font-semibold ${getDifficultyColor(
+      current.difficulty
+    )}`}
+  >
+    {current.difficulty || "Medium"}
+  </span>
+
+</div>
             <h1 className="text-3xl font-bold text-gray-900">
               {current.company?.name || 'Unknown Company'}
             </h1>
