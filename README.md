@@ -8,4 +8,5 @@ Idempotent CSV ingestion pipeline — TPO can re-upload without data corruption
 Admin-only write access via JWT — data quality controlled at the gate, not after
 Server-side pagination and filtering — scales to multi-batch, multi-department without re-architecture
 Optional alumni identity disclosure — respects privacy while enabling warm outreach
-Live: alumnex-zeta.vercel.app | 
+Live Frontend: https://alumnex-c96d.vercel.app
+API: https://alumnex-api.onrender.com
