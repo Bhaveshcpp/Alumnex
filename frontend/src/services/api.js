@@ -1,7 +1,9 @@
 import axios from 'axios'
 
 const isDev = typeof window !== 'undefined' && window.location.hostname === 'localhost'
-const BASE = isDev ? 'http://localhost:3000/api' : 'https://alumnex.onrender.com/api'
+const BASE = isDev
+  ? "http://localhost:3000/api"
+  : "https://alumnex-api.onrender.com/api";
 
 const client = axios.create({ baseURL: BASE, timeout: 30000 })
 
