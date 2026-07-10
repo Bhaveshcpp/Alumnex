@@ -2,6 +2,7 @@ import React, { Suspense, lazy } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Toast from './components/Toast'
 import ProtectedAdminRoute from './components/ProtectedAdminRoute'
+import PageLoader from "./components/PageLoader";
 
 const Home = lazy(() => import('./pages/Home'))
 const CompanyDetail = lazy(() => import('./pages/CompanyDetail'))
@@ -17,7 +18,7 @@ const BulkUpload = lazy(() => import('./pages/BulkUpload'))
 export default function AppRoutes() {
   return (
     <>
-      <Suspense fallback={<div className="p-6">Loading...</div>}>
+        <Suspense fallback={<PageLoader />}>
         <Routes>
           {/* Public Routes */}
           <Route path="/" element={<Home />} />
