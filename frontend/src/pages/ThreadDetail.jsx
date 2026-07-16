@@ -79,12 +79,27 @@ export default function ThreadDetail() {
   return (
     <MainLayout>
       <div className="max-w-4xl mx-auto">
-        <button
-          onClick={() => navigate("/")}
-          className="text-blue-600 hover:text-blue-700 font-medium mb-6 flex items-center gap-1"
-        >
-          ← Back
-        </button>
+           
+           <div className="flex items-center justify-between mb-6">
+
+  <button
+    onClick={() => navigate('/')}
+    className="text-blue-600 hover:text-blue-700 font-medium flex items-center gap-1"
+  >
+    ← Back
+  </button>
+
+  <button
+    onClick={() => {
+      navigator.clipboard.writeText(window.location.href);
+      alert("Interview link copied!");
+    }}
+    className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
+  >
+    📋 Copy Link
+  </button>
+
+</div>
 
         <article className="bg-white border border-gray-200 rounded-lg p-8">
 
